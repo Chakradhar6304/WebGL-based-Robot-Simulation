@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebGL Robot with Textures</title>
+</head>
+<body>
+    <canvas id="gl-canvas" width="512" height="512">
+        Your browser does not support the HTML5 canvas element.
+    </canvas>
+
+    
+    <script id="vertex-shader" type="x-shader/x-vertex">
+        attribute vec4 vPosition;
+        attribute vec2 vTexCoord;
+        varying vec2 fTexCoord;
+        
+        uniform mat4 modelViewMatrix;
+        uniform mat4 projectionMatrix;
+
+        void main() {
+            gl_Position = projectionMatrix * modelViewMatrix * vPosition;
+            fTexCoord = vTexCoord;
+        }
+    </script>
+
+    
+    <script id="fragment-shader" type="x-shader/x-fragment">
+        precision mediump float;
+        
+        varying vec2 fTexCoord;
+        uniform sampler2D texture;
+
+        void main() {
+            gl_FragColor = texture2D(texture, fTexCoord);
+        }
+    </script>
+
+    
+    <script src="Common/initShaders.js"></script>
+    <script src="Common/MV.js"></script>
+    <script src="Common/MV2.js"></script>
+    <script src="Common/webgl-utils.js"></script>
+
+    
+    <script src="gl-robot/app.js"></script>
+</body>
+</html>
