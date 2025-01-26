@@ -1,5 +1,3 @@
-Professor Xiao,
-
 This project is a WebGL-based robot simulation that allows the user to move the robot, toggle textures, and animate the robot with jumping and spinning functionalities using keyboard controls. Below are the instructions for running the project in Visual Studio Code and interacting with the robot.
 
 Running the Project
@@ -28,8 +26,6 @@ Controls
 Additional Information
 - The project uses two textures that are applied to the robot, which can be toggled with the `C` key.
 - The animations for spinning and jumping can be activated simultaneously to create complex movements.
-
-Please feel free to reach out if you have any questions or issues.
 
 Best regards,
 CHAKRADHAR REDDY NEMALIDINNE
